@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Westpac - Creating Account</title>
+    <!-- Redirects to next page after 2 seconds to simulate loading -->
+    <meta http-equiv="refresh" content="2;url=account_created.html" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <img src="images/logo.png" class="desktop_logo" alt="logo" />
+      <img src="images/mobile_logo.png" class="mobile_logo" alt="logo" />
+
+      <!-- Dummy login button link -->
+      <button class="button">Login</button>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="index.html">Bank Accounts</a>
+        <a href="#">Loans</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="content">
+      <!-- Background image -->
+
+      <div class="container2">
+        <img class="bg_image2" src="/images/bg_image_student.png" alt="pig" />
+        <h1 class="text2">Creating your account...</h1>
+
+        <!-- Loading circle bouncing animation -->
+        <div id="animation">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+
+        <!-- Tip text -->
+        <h3 class="text5">
+          Helpful Tip:<br />
+          <br />Make a note of when rent or bills are due to come out and set
+          the money aside as soon as you get paid.
+        </h3>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

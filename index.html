@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Westpac Choice Account</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <img src="images/logo.png" class="desktop_logo" alt="logo" />
+      <img src="images/mobile_logo.png" class="mobile_logo" alt="logo" />
+      <!-- Dummy login button link -->
+      <button class="button">Login</button>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="index.html">Bank Accounts</a>
+        <a href="#">Loans</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </nav>
+    <!-- Main content -->
+    <main class="content">
+      <!-- Background image -->
+
+      <div class="container">
+        <img class="bg_image" src="/images/bg_image_pig.png" alt="pig" />
+        <h1 class="text1">Open a <br />Westpac Choice <br />account</h1>
+        <!-- Selections and buttons -->
+        <div class="choose-account">
+          <select name="account type" id="account_type">
+            <option value="" disabled selected>Account Type</option>
+            <option value="Student">Full-time tertiary students</option>
+            <option value="Student">Under 21s</option>
+            <option value="Student">Joining Finances</option>
+            <option value="Student">Moving or new to Australia</option>
+            <option value="Student">Concession Holders</option>
+            <option value="Student">55+ and retired</option>
+          </select>
+          <a href="open_account.html" id="go" class="red-button">Go</a>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

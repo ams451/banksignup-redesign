@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Westpac - What is your name?</title>
+  </head>
+
+  <body class="red">
+    <!-- Header -->
+    <header class="header">
+      <img src="images/logo.png" class="desktop_logo" alt="logo" />
+      <img src="images/mobile_logo.png" class="mobile_logo" alt="logo" />
+      <!-- Dummy login button link -->
+      <button class="button">Login</button>
+    </header>
+
+    <!-- Navigation bar -->
+    <nav>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="index.html">Bank Accounts</a>
+        <a href="#">Loans</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="red-content">
+      <!-- Question -->
+      <div class="container4">
+        <h2 class="text4">What is your name?</h2>
+        <h3 class="text4">As it appears on your official documents</h3>
+      </div>
+
+      <!-- Form -->
+      <form action="q3-verifyID.html">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="name" />
+          <div class="messages"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="middle-name">Middle Name (skip if none)</label>
+          <input type="text" id="middle-name" name="name" />
+          <div class="messages"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="name" />
+          <div class="messages"></div>
+        </div>
+        <div class="buttons-box">
+          <a href="q1-bank.html" id="back" class="clear-button">Back</a>
+          <button type="submit" id="next" class="purple-button">Next</button>
+        </div>
+      </form>
+      <!-- Back and Next Buttons -->
+      <!-- <div class="buttons-box">
+        <a href="q1-bank.html" id="back" class="clear-button">Back</a>
+        <a type="submit" href="q3-verifyID.html" id="next" class="purple-button"
+          >Next</a
+        >
+      </div>-->
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
