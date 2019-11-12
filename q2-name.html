@@ -35,22 +35,26 @@
       </div>
 
       <!-- Form -->
-      <form action="q3-verifyID.html">
+      <form
+        name="nameForm"
+        onSubmit="return validateForm2()"
+        action="q3-verifyID.html"
+      >
         <div class="form-group">
           <label for="first-name">First Name</label>
-          <input type="text" id="first-name" name="name" />
+          <input type="text" id="first-name" name="firstName2" />
           <div class="messages"></div>
         </div>
 
         <div class="form-group">
           <label for="middle-name">Middle Name (skip if none)</label>
-          <input type="text" id="middle-name" name="name" />
+          <input type="text" id="middle-name" name="middleName" />
           <div class="messages"></div>
         </div>
 
         <div class="form-group">
           <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" name="name" />
+          <input type="text" id="last-name" name="lastName2" />
           <div class="messages"></div>
         </div>
         <div class="buttons-box">
@@ -67,7 +71,6 @@
       </div>-->
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

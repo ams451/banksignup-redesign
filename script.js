@@ -1,141 +1,77 @@
+//Q2-customer ID page
+function validateForm() {
+  var fName = document.customerIDForm.firstName.value;
+  var lName = document.customerIDForm.lastName.value;
+  var customerID = document.customerIDForm.customerID.value;
 
-  // I've tried debugging but the validate script doesn't work unfotunately
-  //based off week 10 tutorial code solutions
-  var constraints = {
-    name: {
-      presence: true,
-    
-      length: {
-        minimum: 3,
-      },
-      format: {
-   
-        pattern: "[a-z ]+",
-    
-        flags: "i",
-        message: "Please make sure your name only contains letters"
-      }
-    },
-    number: {
-      presence: true,
-    
-      length: {
-        minimum: 3,
-      },
-      format: {
-   
-        pattern: "[0-9 ]+",
-    
-        flags: "i",
-        message: "Please make sure your name only contains numbers"
-      }
-    },
-    email: {
-     
-      presence: true,
-  
-      email: true
-    },
-    
-  
-   
-  };
-
-  // prevent submit, remains on page
-  var form = document.querySelector("form");
-  //form.addEventListener("submit", function(ev) {
-    ev.preventDefault();
-    handleFormSubmit(form);
-  });
-
-
-  var inputs = document.querySelectorAll("input, textarea, select");
-  console.log(inputs);
-  for (var i = 0; i < inputs.length; ++i) {
-    inputs.item(i).addEventListener("change", function(ev) {
-
-      var errors = validate(form, constraints) || {};
-      showErrorsForInput(this, errors[this.name])
-    });
+  if (fName == null || fName == "") {
+    alert("Please fill in your name");
+    return false;
   }
-
-  function handleFormSubmit(form, input) {
-
-
-    // validate the form against the constraints
-    var errors = validate(form, constraints);
-    // then we update the form to reflect the results
-    showErrors(form, errors || {});
-    if (!errors) {
-      showSuccess();
-    }
+  if (customerID.length < 6) {
+    alert("Your Customer ID has 6 numbers.");
+    return false;
   }
-
-  // Updates the inputs with the validation errors
-  function showErrors(form, errors) {
-    // We loop through all the inputs and show the errors for that input
-    form.querySelectorAll("input[name], select[name]").forEach( function(input) {
-      // Since the errors can be null if no errors were found we need to handle
-      // that
-      showErrorsForInput(input, errors && errors[input.name]);
-    });
+  if (lName == null || lName == "") {
+    alert("Please fill in your last name");
+    return false;
   }
+}
 
-  // Shows the errors for a specific input
-  function showErrorsForInput(input, errors) {
-    // This is the root of the input
-    var formGroup = closestParent(input.parentNode, "form-group")
-      // Find where the error messages will be insert into
-      , messages = formGroup.querySelector(".messages");
-    // First we remove any old messages and resets the classes
-    resetFormGroup(formGroup);
-    // If we have errors
-    if (errors) {
-      // we first mark the group has having errors
-      formGroup.classList.add("has-error");
-      // then we append all the errors
-      errors.forEach(function(error) {
-        addError(messages, error);
-      });
-    } else {
-      // otherwise we simply mark it as success
-      formGroup.classList.add("has-success");
-    }
-  }
+//Q2-name page
+function validateForm2() {
+  var fName2 = document.nameForm.firstName2.value;
+  var lName2 = document.nameForm.lastName2.value;
 
-  // Recusively finds the closest parent that has the specified class
-  function closestParent(child, className) {
-    if (!child || child == document) {
-      return null;
-    }
-    if (child.classList.contains(className)) {
-      return child;
-    } else {
-      return closestParent(child.parentNode, className);
-    }
+  if (fName2 == null || fName2 == "") {
+    alert("Please fill in your name");
+    return false;
   }
+  if (lName2 == null || lName2 == "") {
+    alert("Please fill in your last name");
+    return false;
+  }
+}
 
-  function resetFormGroup(formGroup) {
-    // Remove the success and error classes
-    formGroup.classList.remove("has-error");
-    formGroup.classList.remove("has-success");
-    // and remove any old messages
-    formGroup.querySelectorAll(".help-block.error").forEach(function(el) {
-      el.parentNode.removeChild(el);
-    });
-  }
+//Q3-verify ID page
+//ensures user inputs at least one form of ID
+function validateForm3() {
+  var licence = document.verifyForm.licence.value;
+  var passport = document.verifyForm.passport.value;
+  var medicare = document.verifyForm.medicare.value;
+  var birthcert = document.verifyForm.birthcert.value;
 
-  // Adds the specified error with the following markup
-  // <p class="help-block error">[message]</p>
-  function addError(messages, error) {
-    var block = document.createElement("p");
-    block.classList.add("help-block");
-    block.classList.add("error");
-    block.innerText = error;
-    messages.appendChild(block);
+  if (
+    licence == null &&
+    passport == null &&
+    medicare == null &&
+    birthcert == null
+  ) {
+    alert("Please use at least one form of verification");
+    return false;
+  } else if (
+    licence == "" &&
+    passport == "" &&
+    medicare == "" &&
+    birthcert == ""
+  ) {
+    alert("Please use at least one form of verification");
+    return false;
   }
+}
 
-  function showSuccess() {
-    // We made it \:D/
-    alert("Success!");
+//Q4-address page
+//ensures user enters main address and an email for contact
+function validateForm4() {
+  var address = document.addressForm.address.value;
+  var email = document.addressForm.email.value;
+
+  if (address == null || address == "") {
+    alert("Please fill in your address");
+    return false;
   }
+  if (email == null || email == "") {
+    alert("Please fill in an email");
+    return false;
+  }
+}

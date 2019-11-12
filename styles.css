@@ -1,5 +1,7 @@
 /*//////Pg 1: Account Type//////*/
 
+/*COMMON SECTIONS ACROSS ALL PAGES*/
+
 html,
 body {
   padding: 0;
@@ -16,10 +18,7 @@ main {
   background-color: #fff;
 }
 
-a {
-  text-decoration: none;
-  transition-duration: 0.4s;
-}
+/*BUTTONS*/
 
 .button {
   border-radius: 50px;
@@ -53,6 +52,8 @@ a {
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
+/*HEADER*/
+
 header img {
   margin: 0 50px;
 }
@@ -60,6 +61,7 @@ header img {
 header {
   position: relative;
 }
+
 /*login button*/
 header button {
   float: right;
@@ -67,7 +69,7 @@ header button {
   position: relative;
 }
 
-/*nav bar*/
+/*MENU NAVIGATION BAR*/
 nav {
   background-color: #d6353e;
   margin: 0px 0px;
@@ -80,15 +82,22 @@ nav a {
   padding: 10px 160px;
   font-size: 36px;
   text-decoration: none;
+  position: relative;
 }
 
-/*links*/
-/* this animation doesn't work anymore i'm not sure why -- it did originally*/
+/*LINKS*/
+
+/*Remove underline and colour transition when hover*/
+a {
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
 nav a:before {
   content: "";
   position: absolute;
   width: 80%;
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 10%;
   background-color: #fff;
@@ -99,7 +108,7 @@ nav a:before {
   transition: all 0.3s ease-in-out 0s;
 }
 
-nav a:hover::before {
+nav a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
@@ -123,7 +132,7 @@ a:active {
   color: #bb86a7;
 }
 
-/*main content*/
+/*MAIN CONTENT*/
 
 .bg_image {
   display: inline-block;
@@ -136,6 +145,8 @@ a:active {
 .container {
   margin: 0px 100px;
 }
+
+/*TEXT STYLES*/
 
 h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -184,7 +195,6 @@ select {
 }
 
 /*//////Pg 2: Open Account//////*/
-
 /*Buttons*/
 .clear-button {
   border-radius: 50px;
