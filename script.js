@@ -1,3 +1,5 @@
+document.body.style.zoom = "50%";
+
 //Q2-customer ID page
 function validateForm() {
   var fName = document.customerIDForm.firstName.value;
